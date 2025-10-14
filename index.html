@@ -1,182 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celeste Studio - Full-Stack Digital Partner</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons (optional, but good for services/social) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Celeste Studio - Full-Stack Digital Partner</title>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<!-- Font Awesome for icons (optional, but good for services/social) -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <h1>Design, Develop, Deploy & Deliver</h1>
-            <p class="subtitle">Full-Stack Developer | Digital Marketing Strategist | UI/UX & Graphic Designer</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">See My Work</a>
-                <a href="#contact" class="btn secondary-btn">Let's Connect</a>
-            </div>
-        </div>
-        <!-- The background image will be set via CSS -->
-    </section>
+		<!-- TAILWIND CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+		  /* Prevent Tailwind container conflicts */
+		  .container {
+			max-width: none !important;
+			padding: 0 !important;
+			margin: 0 !important;
+		  }
+		</style>
 
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-image">
-                    <!-- Placeholder for your stylized illustration/image -->
-                    <img src="imgs/celeste.jpg" alt="Picture of Celeste Ndlovu standing in front of Microsoft Logo">
-                </div>
-                <div class="about-text">
-                    <p>I am a passionate full-stack developer with a keen eye for design and a strategic mind for digital marketing. My unique blend of technical expertise, creative vision, and marketing acumen allows me to craft comprehensive digital solutions that not only look great but also drive measurable results.</p>
-                    <p>From architecting robust back-end systems to designing intuitive user interfaces and executing data-driven marketing campaigns, I bring a holistic approach to every project. I thrive on solving complex problems and transforming ideas into impactful digital experiences.</p>
-                    <div class="skills-grid">
-                        <h3>My Core Skills:</h3>
-                        <ul>
-                            <li><i class="fas fa-code"></i> <em>Development:</em> React, Node.js, Java, Python, Databases (SQL/NoSQL), Google Cloud</li>
-                            <li><i class="fas fa-chart-line"></i> <em>Digital Marketing:</em> SEO, SEM, Social Media, Content Strategy, Analytics</li>
-                            <li><i class="fas fa-paint-brush"></i> <em>Design:</em> UI/UX, Figma, Canva, Branding</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<link rel="stylesheet" href="style.css">
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="development">Development</button>
-                <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
-                <button class="filter-btn" data-filter="design">Web & Graphic Design</button>
-            </div>
-            <div class="project-grid">
-                <!-- Example Project Card -->
-                <div class="project-card" data-category="development">
-                    <img src="https://via.placeholder.com/300x200?text=Project+1+Image" alt="Project 1">
-                    <h3>E-commerce Platform Redesign</h3>
-                    <p>Full-stack development of a scalable e-commerce site with integrated payment gateways and user dashboards.</p>
-                    <a href="#" class="btn-small">View Case Study</a>
-                </div>
-                <div class="project-card" data-category="marketing">
-                    <img src="https://via.placeholder.com/300x200?text=Project+2+Image" alt="Project 2">
-                    <h3>SEO & Content Strategy for SaaS</h3>
-                    <p>Implemented an SEO strategy that increased organic traffic by 40% and improved keyword rankings.</p>
-                    <a href="#" class="btn-small">View Case Study</a>
-                </div>
-                <div class="project-card" data-category="design">
-                    <img src="https://via.placeholder.com/300x200?text=Project+3+Image" alt="Project 3">
-                    <h3>Brand Identity & Social Media Kit</h3>
-                    <p>Developed a complete brand identity and created engaging graphic designs for social media campaigns.</p>
-                    <a href="#" class="btn-small">View Case Study</a>
-                </div>
-                <!-- Add more project cards here -->
-            </div>
-        </div>
-    </section>
+	</head>
+	<body>
+		<div class="site-wrapper">
+		  <!-- Navbar -->
+			<header class="navbar">
+			  <div class="nav-container flex justify-between items-center px-6 py-4">
+				<!-- Logo / Title -->
+				<h1 class="text-2xl font-bold text-white tracking-wide">
+				  Celeste <span class="text-blue-500">Studio</span>
+				</h1>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title">What I Offer</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="fas fa-laptop-code service-icon"></i>
-                    <h3>Web Development</h3>
-                    <p>Custom web applications, robust APIs, scalable solutions, and secure back-ends using modern frameworks.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-bullhorn service-icon"></i>
-                    <h3>Digital Marketing Strategy</h3>
-                    <p>SEO audits, targeted SEM campaigns, social media management, and data-driven content strategies.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-drafting-compass service-icon"></i>
-                    <h3>UI/UX & Web Design</h3>
-                    <p>Intuitive user interfaces, engaging user experiences, and responsive web designs for all devices.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-bezier-curve service-icon"></i>
-                    <h3>Graphic Design</h3>
-                    <p>Brand identity development, captivating social media graphics, and professional marketing collateral.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+				<!-- Hamburger button (visible on mobile) -->
+				<button id="menu-toggle" class="block md:hidden text-white text-3xl focus:outline-none">
+				  <i class="fas fa-bars"></i>
+				</button>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">What Clients Say</h2>
-            <div class="testimonial-carousel">
-                <!-- Example Testimonial -->
-                <div class="testimonial-item">
-                    <p>"Celeste delivered a stunning website and an effective marketing strategy. Her multi-faceted skills was a game-changer for our business!"</p>
-                    <h4>- Jane Doe, CEO of TechStart Inc.</h4>
-                </div>
-                <!-- Add more testimonials here -->
-            </div>
-        </div>
-    </section>
+				<!-- Navigation links -->
+				<nav id="nav-links"
+				  class="hidden md:flex flex-col md:flex-row items-center md:gap-6 absolute md:static left-0 top-[72px] w-full md:w-auto px-6 md:px-0 py-6 md:py-0 bg-[#1a202c] md:bg-transparent shadow-md md:shadow-none transition-all duration-300">
+				  <a href="#hero">Home</a>
+				  <a href="#about">About</a>
+				  <a href="#projects">Projects</a>
+				  <a href="#services">Services</a>
+				  <a href="#tiers">Packages</a>
+				  <a href="#comparison">Compare</a>
+				  <a href="#testimonials">Testimonials</a>
+				  <a href="#contact" class="btn-nav-contact">Contact</a>
+				</nav>
+			  </div>
+			</header>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="contact-intro">Have a project in mind or just want to chat? Feel free to reach out!</p>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
-                <button type="submit" class="btn primary-btn">Send Message</button>
-            </form>
-			<p id="status-message" style="display:none; margin-top:10px;"></p>
-            <div class="social-links">
-			  <a href="https://linkedin.com/in/celeste-ndlovu" target="_blank" aria-label="LinkedIn">
-				<i class="fab fa-linkedin fa-2x"></i>
-			  </a>
-			  <a href="https://github.com/bandileceleste" target="_blank" aria-label="GitHub">
-				<i class="fab fa-github fa-2x"></i>
-			  </a>
-			  <a href="https://www.fiverr.com/s/38gdE2Y" target="_blank" aria-label="Fiverr">
-				<img src="imgs/fiverr.svg" alt="Fiverr" class="fiverr-icon">
-			  </a>
+		  
+		<!-- hero section -->
+		<section id="hero" class="hero-section">
+			<div class="hero-content">
+				<h1>Design, Develop, Deploy & Deliver</h1>
+				<p class="subtitle">Full-Stack Developer | Digital Marketing Strategist | UI/UX & Graphic Designer</p>
+				<div class="hero-buttons">
+					<a href="#projects" class="btn primary-btn">See My Work</a>
+					<a href="#contact" class="btn secondary-btn">Let's Connect</a>
+				</div>
+			</div>
+			<!-- bg image set via CSS -->
+		</section>
+
+		<!-- About Me Section -->
+		<section id="about" class="about-section">
+			<div class="custom-container">
+				<h2 class="section-title">About Me</h2>
+				<div class="about-grid">
+					<div class="about-image">
+						<!-- Placeholder for your stylized illustration/image -->
+						<img src="imgs/celeste.jpg" alt="Picture of Celeste Ndlovu standing in front of Microsoft Logo">
+					</div>
+					<div class="about-text">
+						<p>I am a passionate full-stack developer with a keen eye for design and a strategic mind for digital marketing. My unique blend of technical expertise, creative vision, and marketing acumen allows me to craft comprehensive digital solutions that not only look great but also drive measurable results.</p>
+						<p>From architecting robust back-end systems to designing intuitive user interfaces and executing data-driven marketing campaigns, I bring a holistic approach to every project. I thrive on solving complex problems and transforming ideas into impactful digital experiences.</p>
+						<div class="skills-grid">
+							<h3>My Core Skills:</h3>
+							<ul>
+								<li><i class="fas fa-code"></i> <em>Development:</em> React, Node.js, Java, Python, Databases (SQL/NoSQL), Google Cloud</li>
+								<li><i class="fas fa-chart-line"></i> <em>Digital Marketing:</em> SEO, SEM, Social Media, Content Strategy, Analytics</li>
+								<li><i class="fas fa-paint-brush"></i> <em>Design:</em> UI/UX, Figma, Canva, Branding</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="projects-section">
+			<div class="custom-container">
+				<h2 class="section-title">My Projects</h2>
+				<div class="project-filters">
+					<button class="filter-btn active" data-filter="all">All</button>
+					<button class="filter-btn" data-filter="development">Development</button>
+					<button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+					<button class="filter-btn" data-filter="design">Web & Graphic Design</button>
+				</div>
+				<div class="project-grid">
+					<!-- Project 1 -->
+					  <div class="project-card" data-category="development">
+						<img src="https://via.placeholder.com/300x200?text=Ecommerce+Site" alt="Ecommerce Website">
+						<h3>E-commerce Website</h3>
+						<p>Designed and developed an online store with product listings, cart and checkout, and secure payment integration.</p>
+						<a href="project-ecom.html" class="btn-small">View Case Study</a>
+					  </div>
+					  
+					  <!-- Project 2 -->
+					  <div class="project-card" data-category="marketing">
+						<img src="https://via.placeholder.com/300x200?text=SEO+Marketing" alt="SEO Project">
+						<h3>SEO & Local Marketing</h3>
+						<p>Optimized a local business website for search engines and improved Google ranking, leading to more customer enquiries.</p>
+						<a href="project-local.html" class="btn-small">View Case Study</a>
+					  </div>
+					  
+					  <!-- Project 3 -->
+					  <div class="project-card" data-category="design">
+						<img src="https://via.placeholder.com/300x200?text=Brand+Kit" alt="Branding Project">
+						<h3>Brand Identity & Website Design</h3>
+						<p>Created a full brand kit (logo, colors, fonts) and designed a modern, mobile-friendly website for a startup business.</p>
+						<a href="project-branding.html" class="btn-small">View Case Study</a>
+					  </div>
+					  
+					  <!-- Project 4 -->
+					  <div class="project-card" data-category="development">
+						<img src="https://via.placeholder.com/300x200?text=Business+Site" alt="Business Website">
+						<h3>Business Website</h3>
+						<p>Built a professional business website with About, Services, and Contact pages, plus WhatsApp integration for quick communication.</p>
+						<a href="project-local.html" class="btn-small">View Case Study</a>
+					  </div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="services-section">
+			<div class="custom-container">
+				<h2 class="section-title">What I Offer</h2>
+				<div class="services-grid">
+					<div class="service-item">
+						<i class="fas fa-laptop-code service-icon"></i>
+						<h3>Web Development</h3>
+						<p>Custom web applications, robust APIs, scalable solutions, and secure back-ends using modern frameworks.</p>
+					</div>
+					<div class="service-item">
+						<i class="fas fa-bullhorn service-icon"></i>
+						<h3>Digital Marketing Strategy</h3>
+						<p>SEO audits, targeted SEM campaigns, social media management, and data-driven content strategies.</p>
+					</div>
+					<div class="service-item">
+						<i class="fas fa-drafting-compass service-icon"></i>
+						<h3>UI/UX & Web Design</h3>
+						<p>Intuitive user interfaces, engaging user experiences, and responsive web designs for all devices.</p>
+					</div>
+					<div class="service-item">
+						<i class="fas fa-bezier-curve service-icon"></i>
+						<h3>Graphic Design</h3>
+						<p>Brand identity development, captivating social media graphics, and professional marketing collateral.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+	<!-- Tiers Section -->
+	
+		<section id="tiers" class="tier-section">
+		  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+			<div class="text-center mb-12">
+			  <h2 class="section-title">
+				Website Packages
+			  </h2>
+			  <p class="mt-4 text-lg text-white-600">
+				Choose the plan that matches your business goals. Upgrade anytime.
+			  </p>
+			  <p class="mt-2 text-sm text-white-500">
+				💡 For a more accurate and customized quote, reach out to me directly.
+			  </p>
 			</div>
 
-        </div>
-    </section>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			  
+			  <!-- Tier 1 -->	  
+			  <div class="rounded-2xl shadow-lg bg-white p-8 flex flex-col relative hover:scale-105 transition-transform">
+				<h3 class="text-xl font-semibold text-gray-900">Starter Site</h3>
+				<p class="mt-2 text-gray-600">Your digital business card</p>
+				<p class="mt-6 text-3xl font-bold text-gray-900">$100–$200</p>
+				<ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+				  <li>One-page responsive design</li>
+				  <li>About, Services, Contact sections</li>
+				  <li>Smooth animations</li>
+				</ul>
+				<p class="mt-4 text-sm text-gray-500">Perfect for freelancers, local businesses, and portfolios.</p>
+				<a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 text-center">
+				  Get Started
+				</a>
+			  </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Celeste Studio. All rights reserved.</p>
-            <p>Designed and Developed by Celeste Ndlovu.</p>
-        </div>
-    </footer>
+			  <!-- Tier 2 -->
+			  <div class="rounded-2xl shadow-lg bg-white p-8 flex flex-col border-2 border-blue-600 relative hover:scale-105 transition-transform">
+				  <span class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-bl-lg">
+					Most Popular
+				  </span>
+				<h3 class="text-xl font-semibold text-blue-600">Dynamic Site</h3>
+				<p class="mt-2 text-gray-600">Your automated assistant</p>
+				<p class="mt-6 text-3xl font-bold text-gray-900">$250–$500</p>
+				<ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+				  <li>Everything in Starter</li>
+				  <li>Contact forms + email integration</li>
+				  <li>API integrations (Maps, Booking, Newsletter)</li>
+				  <li>Light database support</li>
+				</ul>
+				<p class="mt-4 text-sm text-gray-500">Great for consultants, startups, and restaurants.</p>
+				<a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 text-center">
+				  Get Started
+				</a>
+			  </div>
 
-	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="script.js"></script>
-</body>
+			  <!-- Tier 3 -->
+			  <div class="rounded-2xl shadow-lg bg-white p-8 flex flex-col relative hover:scale-105 transition-transform">
+				  <h3 class="text-xl font-semibold text-gray-900">Ecommerce Site</h3>
+				  <p class="mt-2 text-gray-600">Your 24/7 storefront</p>
+				  <p class="mt-6 text-3xl font-bold text-gray-900">$700–$1,200</p>
+				  <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+					<li>Everything in Dynamic</li>
+					<li>Online shop with categories</li>
+					<li>Cart + checkout system</li>
+					<li>Secure payments (Stripe, PayPal)</li>
+					<li>Optional customer accounts</li>
+				  </ul>
+				  <p class="mt-4 text-sm text-gray-500">Ideal for boutiques, niche stores, and growing brands.</p>
+				  <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 text-center">
+					Get Started
+				  </a>
+				</div>
+
+
+			<!-- Tier 4 -->
+			  <div class="rounded-2xl shadow-lg bg-white p-8 flex flex-col relative hover:scale-105 transition-transform">
+				<h3 class="text-xl font-semibold text-gray-900">Smart Site</h3>
+				<p class="mt-2 text-gray-600">Your AI-powered sales rep</p>
+				<p class="mt-6 text-3xl font-bold text-gray-900">$1,500+</p>
+				<ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+				  <li>Everything in Ecommerce</li>
+				  <li>AI chatbot integration</li>
+				  <li>Personalized support & recommendations</li>
+				</ul>
+				<p class="mt-4 text-sm text-gray-500">Best for SaaS, retail, and businesses wanting an edge.</p>
+				<a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 text-center">
+				  Get Started
+				</a>
+			  </div>
+
+		  <!-- Tier 5 -->
+				<div class="rounded-2xl shadow-lg bg-white p-8 flex flex-col relative hover:scale-105 transition-transform">
+					<h3 class="text-xl font-semibold text-gray-900">Custom Platform</h3>
+					<p class="mt-2 text-gray-600">Your business, upgraded</p>
+					<p class="mt-6 text-3xl font-bold text-gray-900">Custom Quote</p>
+					<ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+					  <li>Dashboards & CRM integrations</li>
+					  <li>Multi-user roles</li>
+					  <li>Scalable backend systems</li>
+					</ul>
+					<p class="mt-4 text-sm text-gray-500">For startups & businesses needing full platforms.</p>
+					<a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 text-center">
+					  Get Started
+				  </a>
+				</div>
+
+				<!-- Bonus Marketing Add-on -->
+				<div class="rounded-2xl shadow-lg bg-white p-8 flex flex-col relative hover:scale-105 transition-transform">
+				  <h3 class="text-xl font-semibold text-gray-900"> Digital Marketing & Analytics Add-On</h3>
+				  <p class="mt-2 text-gray-600">
+					Drive traffic, rank higher, and increase sales.
+				  </p>
+				  <p class="mt-6 text-3xl font-bold text-gray-900">Custom Quote</p>
+				  <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+					  <li>SEO</li>
+					  <li>Google Ads</li>
+					  <li>Meta Ads</li>
+					  <li>Advanced Analytical Tracking</li>
+					</ul>
+				  <p class="mt-2 text-sm text-gray-500">Works best alongside any website package.</p>
+				  <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 text-center">
+					Add Marketing Package
+				  </a>
+				</div>
+
+			</div>
+		</section>
+		
+		<!-- ADDED SECTION FOR COMPARISON -->
+		 
+		 <section id="comparison" class="mt-20">
+		  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+			<div class="text-center mb-12">
+			  <h2 class="section-title">Compare Packages</h2>
+			  <p class="mt-4 text-lg text-white-600">
+				See exactly what’s included in each plan. All packages come with <strong>FREE domain, hosting, SSL, and a professional email</strong> for 1 year.
+			  </p>
+			</div>
+
+			<div class="overflow-x-auto">
+			  <table class="min-w-full border border-gray-200 text-sm text-white-700">
+				<thead>
+				  <tr class="bg-gray-100 text-gray-900">
+					<th class="p-4 text-left">Features</th>
+					<th class="p-4 text-center">Starter<br><span class="font-semibold text-lg">$80–$150</span></th>
+					<th class="p-4 text-center">Dynamic<br><span class="font-semibold text-lg">$300–$600</span></th>
+					<th class="p-4 text-center">Ecommerce<br><span class="font-semibold text-lg">$700–$1,200</span></th>
+					<th class="p-4 text-center">Smart Site<br><span class="font-semibold text-lg">$1,500+</span></th>
+					<th class="p-4 text-center">Custom<br><span class="font-semibold text-lg">Quote</span></th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr class="border-t">
+					<td class="p-4">Responsive Design</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+				  </tr>
+				  <tr class="border-t">
+					<td class="p-4">About / Services / Contact Sections</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+				  </tr>
+				  <tr class="border-t">
+					<td class="p-4">Contact Form + Email Integration</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+				  </tr>
+				  <tr class="border-t">
+					<td class="p-4">API Integration (Maps, Bookings, etc.)</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+				  </tr>
+				  <tr class="border-t">
+					<td class="p-4">E-commerce (Cart + Checkout)</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+				  </tr>
+				  <tr class="border-t">
+					<td class="p-4">Secure Payments (PayNow, EcoCash, PayPal)</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+				  </tr>
+				  <tr class="border-t">
+					<td class="p-4">AI Chatbot & Smart Features</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">✔</td>
+					<td class="p-4 text-center">✔</td>
+				  </tr>
+				  <tr class="border-t">
+					<td class="p-4">Advanced Platforms / CRM</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">❌</td>
+					<td class="p-4 text-center">✔</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+		</section>
+		<!-- END OF ADDED SECTION -->
+
+
+			<!-- Testimonials Section -->
+			<section id="testimonials" class="testimonials-section">
+				<div class="custom-container">
+					<h2 class="section-title">What Clients Say</h2>
+					<div class="testimonial-carousel">
+						<!-- Example Testimonial -->
+						<div class="testimonial-item">
+							<p>"Celeste delivered a stunning website and an effective marketing strategy. Her multi-faceted skills was a game-changer for our business!"</p>
+							<h4>- Jane Doe, CEO of TechStart Inc.</h4>
+						</div>
+						<!-- Add more testimonials here -->
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section id="contact" class="contact-section">
+				<div class="custom-container">
+					<h2 class="section-title">Get in Touch</h2>
+					<p class="contact-intro">Have a project in mind or just want to chat? Feel free to reach out!</p>
+					<form class="contact-form">
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						<div class="form-group">
+							<label for="subject">Subject</label>
+							<input type="text" id="subject" name="subject">
+						</div>
+						<div class="form-group">
+							<label for="message">Message</label>
+							<textarea id="message" name="message" rows="6" required></textarea>
+						</div>
+						<button type="submit" class="btn primary-btn">Send Message</button>
+					</form>
+					<p id="status-message" style="display:none; margin-top:10px;"></p>
+					<div class="social-links">
+					  <a href="https://linkedin.com/in/celeste-ndlovu" target="_blank" aria-label="LinkedIn">
+						<i class="fab fa-linkedin fa-2x"></i>
+					  </a>
+					  <a href="https://github.com/bandileceleste" target="_blank" aria-label="GitHub">
+						<i class="fab fa-github fa-2x"></i>
+					  </a>
+					  <a href="https://www.fiverr.com/s/38gdE2Y" target="_blank" aria-label="Fiverr">
+						<img src="imgs/fiverr.svg" alt="Fiverr" class="fiverr-icon">
+					  </a>
+					</div>
+
+				</div>
+			</section>
+	
+			<!-- BACK TO TOP BUTTON -->
+		  <button id="backToTop" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+			<!-- Footer -->
+			<footer class="footer">
+				<div class="custom-container">
+					<p>&copy; 2025 Celeste Studio. All rights reserved.</p>
+					<p class="footer-credit">
+						Designed and developed by <a href="https://www.celestendlovu.com" class="text-white me-3">Celeste Ndlovu</a>
+					</p>
+				</div>
+			</footer>
+
+			<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+			<script src="script.js"></script>
+		</div>
+	</body>
 </html>
